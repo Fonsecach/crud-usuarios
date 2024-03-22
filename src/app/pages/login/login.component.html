@@ -5,9 +5,11 @@
         <h1 class="titulo">APLICAÇÃO CRUD</h1>
         <h2 class="subtitulo">Mais eficiancia no controle de usuários</h2>
 
-        <input class="input-form" type="text" placeholder="Digite seu nome">
+        <input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" class="input-form" type="text" placeholder="Digite seu nome">
 
-        <app-button textButton="Acessar" size="100"></app-button>
+        <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="input-form" type="text" placeholder="Digite a sua senha">
+
+        <app-button textButton="Acessar" size="100" (click)="login()"></app-button>
     </form>
     <p class="footer">© 2024 | Desenvolvido por Cleiton Fonseca</p>
 </div>
